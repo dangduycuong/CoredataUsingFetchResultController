@@ -30,19 +30,37 @@
                                     <action selector="save:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T1l-fI-WEl"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ta-J7-CWh">
+                                <rect key="frame" x="164" y="479.5" width="86" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="LoadData"/>
+                                <connections>
+                                    <action selector="tapToLoadData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dNV-Qt-Ovz"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YwE-iv-IAC">
+                                <rect key="frame" x="16" y="110" width="382" height="306.5"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6ta-J7-CWh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2gb-Un-RWb"/>
                             <constraint firstItem="Wbo-Cy-1qM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="9kw-nl-aDI"/>
+                            <constraint firstItem="6ta-J7-CWh" firstAttribute="top" secondItem="bEC-9T-tTZ" secondAttribute="bottom" constant="16" id="Ic1-1q-EYe"/>
                             <constraint firstItem="bEC-9T-tTZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Mq8-AG-fpK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YwE-iv-IAC" secondAttribute="trailing" constant="16" id="YCz-mi-c9H"/>
+                            <constraint firstItem="YwE-iv-IAC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Ykj-yB-4He"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wbo-Cy-1qM" secondAttribute="trailing" constant="16" id="c7V-Bi-Dr4"/>
                             <constraint firstItem="bEC-9T-tTZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fOK-kk-xuO"/>
+                            <constraint firstItem="bEC-9T-tTZ" firstAttribute="top" secondItem="YwE-iv-IAC" secondAttribute="bottom" constant="16" id="gDU-Vz-Ew5"/>
+                            <constraint firstItem="YwE-iv-IAC" firstAttribute="top" secondItem="Wbo-Cy-1qM" secondAttribute="bottom" constant="16" id="nUt-SY-a5w"/>
                             <constraint firstItem="Wbo-Cy-1qM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="pvU-FL-WJ3"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="contentTextField" destination="Wbo-Cy-1qM" id="SxY-cc-pyd"/>
+                        <outlet property="imageView" destination="YwE-iv-IAC" id="gO4-AS-UKr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

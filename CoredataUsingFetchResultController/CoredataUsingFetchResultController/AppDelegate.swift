@@ -33,9 +33,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     // MARK: - Core Data stack
-    static var context: NSManagedObjectContext {
-        return (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    }
+//    static var context: NSManagedObjectContext {
+//        return (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//    }
     
     lazy var persistentContainer: NSPersistentContainer = {
         /*
@@ -67,9 +67,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Core Data Saving support
     
     func saveContext () {
-        if AppDelegate.context.hasChanges {
+        let context = persistentContainer.viewContext
+        if context.hasChanges {
             do {
-                try AppDelegate.context.save()
+                try context.save()
             } catch {
                 // Replace this implementation with code to handle the error appropriately.
                 // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
